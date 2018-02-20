@@ -1,0 +1,42 @@
+body {
+    background: url('paris.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: crimson;
+    text-align: center;
+    font-size: 10em;
+    margin-top: 45%;
+    font-weight: 900;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    flex-grow: 1;
+    text-align:center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    padding: 10px;
+    border: 1px solid crimson;
+}
+
+.menu a:hover {
+    background: crimson;
+}
+
+@media (max-width:768px) {
+    h1 {
+        font-size: 7em;
+        margin-top: 30%;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
