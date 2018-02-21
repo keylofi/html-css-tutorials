@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chrome Browser Detection With JavaScript</title>
+</head>
+<body>
+
+    <h1>Chrome Browser Detection With JavaScript</h1>
+
+    <script>
+          
+        function isChrome() {
+            var isChromium = window.chrome;
+            var winNav = window.navigator;
+            var vendorName = winNav.vendor;
+            var isOpera = winNav.userAgent.indexOf("OPR") > -1;
+            var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+            var isIOSChrome = winNav.userAgent.match("CriOS");
+            
+            if (isIOSChrome) {
+                return true;
+            } else if (
+                isChromium !== null &&
+                typeof isChromium !== "undefined" &&
+                vendorName === "Google Inc." &&
+                isOpera === false &&
+                isIEedge === false
+            ) {
+                return true;
+            } else { 
+                return false;
+            }
+        }
+
+        if(isChrome()) {
+            alert("Hi, I am Chrome!");
+        } else {
+            alert("I am NOT Chrome!");
+        }
+
+    </script>
+
+</body>
+</html>
