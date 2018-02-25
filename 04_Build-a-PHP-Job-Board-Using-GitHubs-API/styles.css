@@ -1,0 +1,93 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/*# sourceMappingURL=normalize.min.css.map */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f4f4;
+}
+
+h1 {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.75em;
+    color: #fff;
+}
+
+.header {
+    background-color: #222;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    list-style: none;
+    padding: 0;
+    align-content: space-evenly;
+}
+
+.job {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 40px;
+    grid-template-areas:
+    "company_logo date"
+    "job_title job_title"
+    "view_job view_job";
+    transition: box-shadow 0.3;
+}
+
+.job:hover {
+    box-shadow: 0 0 10px grey;
+}
+
+.date {
+    grid-area: date;
+    color: #888;
+    font-size: 10px;
+    text-align: right;
+}
+
+.job_title {
+    grid-area: job_title;
+    text-align: center;
+}
+
+.job_title span {
+    font-weight: 400;
+    font-size: 0.75em;
+    color: #888;
+}
+
+.company_logo img {
+    grid-area: company_logo;
+    width: 100px;
+}
+
+.view_job {
+    grid-area: view_job;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.view_job:hover {
+    background-color: blue;
+}
+
+@media (max-width: 768px) {
+    .jobs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
